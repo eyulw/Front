@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join</title>
+</head>
+
+<body>
+    <h1>회원가입</h1>
+    <div>
+        <p style="font-size: 20px;"><strong>기본정보</strong></p>
+        <span>
+            <span>개인회원</span>
+            <span>사업자회원</span>
+            <span>외국인회원(foreigner)</span>
+        </span>
+        <p>
+            <strong>아이디</strong> <input type="text" placeholder="(영문소문자/숫자,4-16자)" style="width:500px;">
+        </p>
+        <p>
+            <strong>비밀번호</strong> <input type="password" placeholder="(영문 대소문자/숫자/특수문자 중 2가지 이상 조합,8-16자)"
+                style="width:500px;">
+        </p>
+        <p>
+            <strong>비밀번호 확인</strong> <input type="password" style="width:500px;">
+        </p>
+        <p>
+            <strong>이름</strong> <input type="text" style="width:500px;">
+        </p>
+        <span><strong>주소</strong></span>
+        <p>
+            <span><input type="text" style="width:300px;"></span>
+            <span><button style="color: white; background-color: black;">우편번호</button></span>
+        </p>
+        <p><input type="text" placeholder="기본주소"></p>
+        <p><input type="text"></p>
+        <p>
+            <strong>휴대전화</strong>
+            <span>
+                <select>
+                    <option>010</option>
+                    <option>011</option>
+                    <option>016</option>
+                    <option>017</option>
+                    <option>018</option>
+                    <option>019</option>
+                </select>
+            </span>-
+            <span><input type="tel" style="width:70px;"></span> -
+            <span><input type="tel" style="width:70px;"></span>
+            <span><button style="color: white; background-color: black;">간편인증</button></span>
+        </p>
+        <p>
+            이메일 <input type="email" style="width:500px;">
+        </p>
+    </div>
+    <div>
+        <strong style="font-size: 20px;">추가정보</strong>
+        <p>
+            <strong>성별</strong>
+            <label><input type="radio" name="gender" value="male">남자</label>
+            <label><input type="radio" name="gender" value="female">여자</label>
+        </p>
+        <p>
+            <strong>생년월일</strong>
+            <input type="number" id="year" style="width: 100px;"> 년
+            <input type="number" id="month" style="width: 100px;"> 월
+            <input type="number" id="date" style="width: 100px;"> 일
+        </p>
+    </div>
+    <div>
+        <strong style="font-size: 20px;">전체동의</strong>
+        <p><input type="checkbox"> <strong>이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.</strong></p>
+        <p><input type="checkbox"> [필수]이용약관 동의</p>
+        <p><input type="checkbox"> [필수]개인정보 수집 및 이용 동의</p>
+        <p>
+            <span><input type="checkbox"> [선택]SMS(문자,카카오톡 등)수신을 동의하십니까? </span>
+            <span><input type="checkbox">[선택]이메일 수신을 동의하십니까?</span>
+        </p>
+    </div>
+    <div>
+        <span><button style="color: black; background-color: white;">취소</button></span>
+        <span><button style="color: white; background-color: black;">회원가입</button></span>
+    </div>
+</body>
+
+</html>
