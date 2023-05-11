@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <link rel="shortcut icon" href="../images/logo_daum.png" type="image/x-icon">
+</head>
+
+<body>
+    <table border="1">
+        <colgroup> <!--열에 효과주고싶을때-->
+            <col style="width: 300px;">
+            <col style="width: 500px;">
+        </colgroup>
+        <thead> <!--thead 생략가능-->
+            <tr> <!--tr : 한줄-->
+                <!--th : 한칸  // scope="col" 밑으로 읽기, 시각장애인들을 위한 접근성 향상-->
+                <th scope="col">제목</th>
+                <th scope="col">내용</th> <!--한칸-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>날씨 덥다</td>
+                <td>집 가고 싶다</td>
+            </tr>
+            <tr>
+                <td>날씨 덥다</td>
+                <td>집 가고 싶다</td>
+            </tr>
+            <tr>
+                <td>날씨 덥다</td>
+                <td>집 가고 싶다</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table border="1" width="800px">
+        <colgroup>
+            <col style="width: 30%;"> <!--부모의 크기가 정해지면 %로 많이 씀-->
+            <col style="width: 20%;">
+            <col> <!--나머지는 자동으로 50%할당-->
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">주제</th>
+                <th scope="col">태그</th>
+                <th scope="col">비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!--밑에 행들 합치는건 rowspan-->
+                <td rowspan="4">테이블의 구성 요소</td>
+                <td>&lt;table&gt;</td>
+                <td>테이블을 만드는 태그</td>
+            </tr>
+            <tr>
+                <td>&lt;th&gt;</td>
+                <td>테이블의 헤더부분을 만드는 태그</td>
+            </tr>
+            <tr>
+                <td>&lt;tr&gt;</td>
+                <td>테이블의 행을 만드는 태그</td>
+            </tr>
+            <tr>
+                <td>&lt;td&gt;</td>
+                <td>테이블의 열을 만드는 태그</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table border="1" width="600px">
+        <thead>
+            <tr>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+                <th>토</th>
+                <th>일</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">쌀밥</td>
+                <td colspan="3">잡곡밥</td>
+                <td>스파게티</td>
+                <td>짜장면</td>
+            </tr>
+            <tr>
+                <td>불고기</td>
+                <td>떡갈비</td>
+                <td>미니돈까스</td>
+                <td>오징어볶음</td>
+                <td>제육볶음</td>
+                <td rowspan="2">피클</td>
+                <td>단무지</td>
+            </tr>
+            <tr>
+                <td>배추김치</td>
+                <td>깍두기</td>
+                <td>미소된장국</td>
+                <td>동치미</td>
+                <td>고추절임</td>
+                <td>짬뽕국물</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
