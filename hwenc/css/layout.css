@@ -17,6 +17,26 @@
     transition:all 0.5s ease;
 }
 
+.header .logo a .white{
+    position: absolute;
+    transition:all 0.25s ease;
+}
+
+.header .logo a .black{
+    /* 투명도 처리하는 태그 */
+    opacity: 0;
+    transition:all 0.25s ease;
+}
+
+.header:hover .logo a .black{
+    opacity: 1;
+    transition:all 0.25s ease;
+}
+.header:hover .logo a .white{
+    opacity: 0;
+    transition:all 0.25s ease;
+}
+
 /* 가상의 태그 */
 .header:after{
     content:"";
