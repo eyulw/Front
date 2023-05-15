@@ -1,0 +1,96 @@
+.main{
+    &-visual video{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+
+// .main-visual video {
+//     width: 100%;
+//     height: 100vh;
+//     object-fit: cover;
+// }
+
+.business{
+    padding:150px 0;
+    .list {
+        display: flex;
+        color: #111;
+        li{
+            width:25%;
+            position: relative;
+            &:hover{
+                .img-box{
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            // from 1 through 4: 4보다작거나같음
+            @for $i from 1 to 5{
+                //보간(interpolation)
+                &:nth-child(#{$i}) a:before{
+                background-image: url("../images/main/main_business_icon0#{$i}.png");
+                }
+            }
+            a{
+                display: flex;
+                // column은 수직으로 세우기 reverse는 위아래 뒤집기
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+                aspect-ratio: 1 / 1.3;
+                // outline: 1px solid #f00;
+                // z-index: 2;
+                // position: relative;
+                &:before{
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 100px;
+                    // background-color: #ccc;
+                    // 이미지 반복됨. 패턴 만들때 사용됨
+                    // background-image: url("../images/main/main_business_icon01.png");
+                    // 배경 반복 안하기
+                    background-repeat: no-repeat;
+                    background-position: 50% 0;
+                }
+            }
+            .img-box{
+                // display: none;
+                // 사용자가 일으키는 어떠한 이벤트도 싹 다 무시
+                pointer-events: none;
+                opacity: 0;
+                top:0;
+                transform: translateY(100px);
+                position: absolute;
+                transition: all 0.25s ease;
+                .txt{
+                    position:absolute;
+                    color: #fff;
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    // line-height랑 font-weight는 단위 안씀
+                    line-height: 1.5;
+                    h3{
+                        font-size: (24px + 4px);
+                        font-weight: 500;
+                        // font: {
+                        //     size:(24px + 4px);
+                        //     weight: 500;
+                        // }
+                        margin-bottom: 20px;
+                    }
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

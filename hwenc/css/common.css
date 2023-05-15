@@ -23,7 +23,7 @@ a {
     /* margin:0 auto 0 도 가능 */
     /* margin: 0 auto >> 상하0 좌우auto */
     margin: 0 auto 0 auto;
-    outline: 1px solid #f00;
+    /* outline: 1px solid #f00; */
 }
 
 h2 { 

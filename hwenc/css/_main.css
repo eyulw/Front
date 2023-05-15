@@ -1,0 +1,24 @@
+.main-visual video {
+    width: 100%;
+    /* (vh)viewport height / (vw)viewport width */
+    height: 100vh;
+    /* object-fit:contain : 비율이 망가지지않음, cover :잘라냄 */
+    object-fit: cover;
+}
+
+.business .list {
+    color: #111;
+}
+
+.business .list li{
+    /* 가로1200 %4 =300 300에서 좌우20씩 빼면 width=260px로 */
+    /* calc() 연산자 다 띄어서 쓰기 */
+    /* width: calc(25% - 40px); */
+    width:25%
+    /* margin: 0 20px; */
+}
+
+.business .list li .img-box{
+    /* 처음에는 none처리하다가 hover하면 display */
+    display: none;
+}
