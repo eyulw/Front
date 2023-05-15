@@ -122,13 +122,13 @@
 .list > li .depth01::after{
     /* content 필수로 들어가야함 "내용을 넣어야지만 화면에 보여짐" */
     content:"";
-    /* display를 잡아줘야 넓이,높이가 생김 */
     /* a태그가 flex처리돼서 옆으로 생김 */
     /* 그래서 position을 absolute로 줘야 부모태그 신경 안씀*/
     position: absolute;
     /* position을 잡아서 좌표를 줄 수 있음 */
     left: 0;
     bottom: -2px;
+    /* display를 잡아줘야 넓이,높이가 생김 */
     display: block;
     /* 100%라는게 기준이 있어야함 */
     width: 100%;

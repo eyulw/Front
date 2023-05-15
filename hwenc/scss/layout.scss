@@ -75,7 +75,7 @@ $main-color: #f60;
                 padding-right: 50px;
                 justify-content: center;
                 transition: all 0.25s ease;
-                border-bottom: 2px solid transparent;
+                // border-bottom: 2px solid transparent;
                 &:after{
                     content:"";
                     position: absolute;
