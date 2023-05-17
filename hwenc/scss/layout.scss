@@ -1,6 +1,6 @@
-$main-color: #f60;
 /*css에 보내고싶은 주석은 이렇게*/
 //sass에서만 사용하는 주석
+@import "vars";
 .header {
     position: fixed;
     width: 100%;
@@ -20,9 +20,9 @@ $main-color: #f60;
         top:100px;
         z-index: -1;
     }
-    &:hover{
+    &.on{
         height: 350px;
-        background-color: rgba(255, 255, 255, 0.25);
+        background-color: rgba(255, 255, 255, 1);
         transition:all 0.5s ease;
         .list{
             color: black;

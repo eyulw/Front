@@ -19,19 +19,19 @@
   top: 100px;
   z-index: -1;
 }
-.header:hover {
+.header.on {
   height: 350px;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgb(255, 255, 255);
   transition: all 0.5s ease;
 }
-.header:hover .list {
+.header.on .list {
   color: black;
 }
-.header:hover .logo a .black {
+.header.on .logo a .black {
   opacity: 1;
   transition: all 0.25s ease;
 }
-.header:hover .logo a .white {
+.header.on .logo a .white {
   opacity: 0;
   transition: all 0.25s ease;
 }
@@ -68,7 +68,6 @@
   padding-right: 50px;
   justify-content: center;
   transition: all 0.25s ease;
-  border-bottom: 2px solid transparent;
 }
 .gnb .list > li .depth01:after {
   content: "";

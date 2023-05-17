@@ -1,0 +1,41 @@
+body {
+ font-size: 16px;
+ color: #111;
+ /* 몇 몇 태그들은 부모의 속성을 물려받지 않는 것들도 있다. >> 따로 해주기 */
+ /* 영어폰트를 우선으로 써주기 */
+ font-family:"Raleway","Noto Sans KR","돋움";
+ font-weight: 400;
+ min-height: 2000px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+    /* 부모태그 color 상속받기 */
+}
+
+.container {
+    width: 1200px;
+    /* 모니터 크기 고려해서 자동으로 가운데 배치 */
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* margin 시계방향 */
+    /* margin:0 auto 0 도 가능 */
+    /* margin: 0 auto >> 상하0 좌우auto */
+    margin: 0 auto 0 auto;
+    /* outline: 1px solid #f00; */
+}
+
+h2 { 
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom:50px;
+}
+
+strong{
+    font-weight: 700;
+}
+
+.point{
+    color: #f60;
+}

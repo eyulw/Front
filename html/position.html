@@ -16,10 +16,8 @@
             width: 300px;
             height: 300px;
             border: 1px solid #f00;
-            /* red부모가 position이 없으니까 red는 기준을 body로 잡고있음 */
             /* margin-top: 30px;
             margin-left: 30px; */
-            /* 만약 부모가 position갖고있으면 red는 parent기준으로 움직임 */
             position: relative;
         }
 
@@ -37,24 +35,17 @@
 
         .red {
             background-color: red;
-            /* 부모는 더이상 얘 레이아웃 무시 */
-            /* 아래에 있는게 (blue) 올라옴 */
             position: absolute;
             z-index: 1;
             right: 10px;
             bottom: 10px;
-            height: 200px;
         }
 
         .blue {
             background-color: blue;
             /* height: 50px; */
-            /* blue가 absolute면 원래 자기 위치에 가만히 있음 red위로 겹쳐지지않음 근데 blue 밑에 뭐 있으면 그게 blue 무시하고 올라옴. 좌표값 주면 부모 기준으로 움직임
-            */
             /* position: relative; */
-            /* 둘다 position있는데 blue가 아래 있어서 z-index 안줘도됨 */
             z-index: 2;
-            /* relative는 자기 기준으로 위치 결정 , absolute는 부모위치기준으로 결정*/
             position: absolute;
             left: 50px;
             top: 50px;
@@ -64,16 +55,10 @@
             background-color: green;
             /* fixed는 무조건 body 기준 */
             /* position: fixed; */
-            /*  sticky는 scroll 기준으로 움직임.
-                scroll이 부모에 걸리면 fixed, 부모 지나가면 relative로 바뀌면서 사라짐
-                부모는 반드시 높이를 가져야함
-                부모요소에 overflow가 들어가있으면 안됨.*/
             position: sticky;
-            /* position: relative;
+            /* position: relative; */
             left: 0;
-            top: 0; */
-            /* z-index는 같은 레벨 인덱스끼리 기준이므로 green이 제일 위에 올라와있을거같지만 blue가 더 위에 올라와있음 */
-            /* 부모에 z-index가 없으면 green이 올라오긴함. */
+            top: 0;
             /* z-index: 3; */
         }
     </style>

@@ -75,3 +75,93 @@
 .business .list li .img-box img {
   width: 100%;
 }
+
+.master-piece {
+  position: relative;
+}
+.master-piece .subject {
+  padding: 150px 0 250px;
+  background-image: url("../images/main/main_master_img01.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  color: #fff;
+}
+.master-piece .subject .main {
+  font-size: 48px;
+}
+.master-piece .case {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.master-piece .case .menu {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 20px;
+}
+.master-piece .case .menu li {
+  width: 20%;
+  padding: 30px 0;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.master-piece .case .menu li:last-child {
+  border-right: none;
+}
+.master-piece .case .menu li:hover {
+  background-color: #f60;
+  border-right-color: #f60;
+}
+.master-piece .case .contents {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.master-piece .case .contents li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.master-piece .case .contents li:nth-child(1) {
+  background-image: url("../images/main/main_master_hover01.jpg");
+}
+.master-piece .case .contents li:nth-child(2) {
+  background-image: url("../images/main/main_master_hover02.jpg");
+}
+.master-piece .case .contents li:nth-child(3) {
+  background-image: url("../images/main/main_master_hover03.jpg");
+}
+.master-piece .case .contents li:nth-child(4) {
+  background-image: url("../images/main/main_master_hover04.jpg");
+}
+.master-piece .case .contents li:nth-child(5) {
+  background-image: url("../images/main/main_master_hover05.jpg");
+}
+.master-piece .case .contents li .container {
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.master-piece .case .contents li .container h3 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.master-piece .case .contents li .container p {
+  font-size: 24px;
+}
