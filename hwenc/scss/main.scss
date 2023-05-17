@@ -55,6 +55,7 @@
                     // background-image: url("../images/main/main_business_icon01.png");
                     // 배경 반복 안하기
                     background-repeat: no-repeat;
+                    // x축 50%(center) y축 0(top:0)
                     background-position: 50% 0;
                 }
             }
@@ -99,6 +100,7 @@
 .master-piece{
     position: relative;
     .subject{
+        // 상 좌우 하
         padding: 150px 0 250px;
         background-image: url("../images/main/main_master_img01.jpg");
         background-repeat: no-repeat;

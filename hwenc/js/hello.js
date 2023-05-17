@@ -1,3 +1,4 @@
+/*
 let myName="김민하";
 myName=10;
 myName="김";
@@ -20,3 +21,12 @@ function add(a,b){
 
 const result = add(10,20);
 console.log(result);
+*/
+
+var n=1;
+function test(){
+    console.log(n);
+    var n=2;
+    console.log(n);
+}
+test();
