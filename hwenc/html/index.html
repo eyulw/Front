@@ -12,12 +12,16 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--외부에서 들어온 폰트 먼저 쓰고 초기화 하고 css 시작-->
+    <link rel="stylesheet" href="../css/swiper-bundle.css">
     <link rel="stylesheet" href="../css/font.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/layout.min.css">
     <link rel="stylesheet" href="../css/main.css">
+
+    <script src="../js/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -97,9 +101,64 @@
         <div class="main-visual">
             <!-- video 속성 controls : 재생버튼생김 // autoplay muted(소리 없애기)를 해야 자동재생됨-->
             <video src="../images/video/main.mp4" autoplay muted loop></video>
+            <div class="mask">
+                <ul class="swiper-wrapper list">
+                    <li class="swiper-slide visual01">
+                        <div class="img"></div>
+                        <div class="txt">
+                            <p class="main">지속가능한 미래를 위한
+                                <br>친환경 에너지
+                                <br>풍력발전사업
+                            </p>
+                            <p class="sub">제주 수망 풍력 발전단지</p>
+                        </div>
+                    </li>
+                    <li class="swiper-slide visual02">
+                        <div class="img"></div>
+                        <div class="txt">
+                            <p class="main">서울숲과 한강을
+                                <br>모두 가진
+                                <br>하이엔드 주거공간
+                            </p>
+                            <p class="sub">서울숲 갤러리아 포레</p>
+                        </div>
+                    </li>
+                    <li class="swiper-slide visual03">
+                        <div class="img"></div>
+                        <div class="txt">
+                            <p class="main">연간 1,500,000톤<br>Phosphoric Acid<br>생산설비</p>
+                            <p class="sub">사우디 Umm Wu’al 인산 플랜트</p>
+                        </div>
+                    </li>
+                    <li class="swiper-slide visual04">
+                        <div class="img"></div>
+                        <div class="txt">
+                            <p class="main">10만 가구, 60만 인구<br>12조원 규모의<br>해외 신도시 수출</p>
+                            <p class="sub">이라크 비스마야 신도시</p>
+                        </div>
+                    </li>
+                    <li class="swiper-slide visual05">
+                        <div class="img"></div>
+                        <div class="txt">
+                            <p class="main">서울 중심에서 빛나는<br>프리미엄 브랜드<br>FORENA</p>
+                            <p class="sub">포레나 영등포</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="btns">
+                    <button class="btn-prev">
+                        <span class="material-icons">west</span>
+                    </button>
+                    <div class="pagination"></div>
+                    <button class="btn-next">
+                        <span class="material-icons">east</span>
+                    </button>
+                </div>
+            </div>
         </div>
+
         <!-- main-visual end -->
-        <div class="business">
+        <div class="business section">
             <div class="container">
                 <h2>사업분야</h2>
                 <ul class="list">
@@ -234,14 +293,240 @@
                     </li>
                 </ul>
                 <ul class="menu">
-                    <li>비스마야 신도시</li>
-                    <li>필리핀 아레나</li>
-                    <li>갤러리아 포레</li>
-                    <li>사우디 움 우알 인산플랜트</li>
-                    <li>경부고속도로 확장</li>
+                    <li><span>비스마야 신도시</span></li>
+                    <li><span>필리핀 아레나</span></li>
+                    <li><span>갤러리아 포레</span></li>
+                    <li><span>사우디 움 우알 인산플랜트</span></li>
+                    <li><span>경부고속도로 확장</span></li>
                 </ul>
             </div>
         </div>
+        <!-- master-piece end -->
+        <div class="news-room section">
+            <div class="container">
+                <h2>뉴스룸</h2>
+                <ul class="list">
+                    <li>
+                        <a href="">
+                            <div class="img-box">
+                                <img src="../images/main/news01.jpg" alt="">
+                            </div>
+                            <h3>㈜한화 건설부문, 포레나 전주에코시티에 키즈테마파크 ‘너티월드’ 첫 유치</h3>
+                            <p>2023.05.17</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img-box">
+                                <img src="../images/main/news02.png" alt="">
+                            </div>
+                            <h3>㈜한화 2023년 1분기, 창사 이래 최대 분기 영업이익 달성</h3>
+                            <p>2023.05.12</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img-box">
+                                <img src="../images/main/news03.jpg" alt="">
+                            </div>
+                            <h3>㈜한화 건설부문, 프리미엄 주거서비스 트렌드 세미나 개최</h3>
+                            <p>2023.04.24</p>
+                        </a>
+                    </li>
+                </ul>
+                <a href="" class="more">MORE</a>
+            </div>
+        </div>
+        <!-- news-room end -->
+        <div class="social section">
+            <div class="container">
+                <h2>소셜채널</h2>
+                <div class="mask">
+                    <ul class="list swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="../images/main/social01.png" alt="">
+                                    <span class="icon youtube"></span>
+                                </div>
+                                <h3>
+                                    킁킁~ 어디서 바다.. 아니 책바람📚 냄새 안 나요? 책바람 따라 도착한 연평도엔 무슨 일이~?!
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="../images/main/social02.png" alt="">
+                                    <span class="icon youtube"></span>
+                                </div>
+                                <h3>
+                                    없는 게 없는, 수원 마이스 복합단지 파헤치기!
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="../images/main/social03.png" alt="">
+                                    <span class="icon blog"></span>
+                                </div>
+                                <h3>
+                                    부린이들을 위한 쉬운 부동산 용어 풀이
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="../images/main/social04.png" alt="">
+                                    <span class="icon blog"></span>
+                                </div>
+                                <h3>
+                                    서울 속 한화를 찾아라! 👀
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="../images/main/social05.png" alt="">
+                                    <span class="icon youtube"></span>
+                                </div>
+                                <h3>
+                                    나를 알아주는 회사가 어디 있냐고? 여기 있지요~!😉
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="../images/main/social01.png" alt="">
+                                    <span class="icon youtube"></span>
+                                </div>
+                                <h3>
+                                    킁킁~ 어디서 바다.. 아니 책바람📚 냄새 안 나요? 책바람 따라 도착한 연평도엔 무슨 일이~?!
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="../images/main/social02.png" alt="">
+                                    <span class="icon youtube"></span>
+                                </div>
+                                <h3>
+                                    없는 게 없는, 수원 마이스 복합단지 파헤치기!
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="../images/main/social03.png" alt="">
+                                    <span class="icon blog"></span>
+                                </div>
+                                <h3>
+                                    부린이들을 위한 쉬운 부동산 용어 풀이
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="../images/main/social04.png" alt="">
+                                    <span class="icon blog"></span>
+                                </div>
+                                <h3>
+                                    서울 속 한화를 찾아라! 👀
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="../images/main/social05.png" alt="">
+                                    <span class="icon youtube"></span>
+                                </div>
+                                <h3>
+                                    나를 알아주는 회사가 어디 있냐고? 여기 있지요~!😉
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="../images/main/social01.png" alt="">
+                                    <span class="icon youtube"></span>
+                                </div>
+                                <h3>
+                                    킁킁~ 어디서 바다.. 아니 책바람📚 냄새 안 나요? 책바람 따라 도착한 연평도엔 무슨 일이~?!
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="../images/main/social02.png" alt="">
+                                    <span class="icon youtube"></span>
+                                </div>
+                                <h3>
+                                    없는 게 없는, 수원 마이스 복합단지 파헤치기!
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="../images/main/social03.png" alt="">
+                                    <span class="icon blog"></span>
+                                </div>
+                                <h3>
+                                    부린이들을 위한 쉬운 부동산 용어 풀이
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="../images/main/social04.png" alt="">
+                                    <span class="icon blog"></span>
+                                </div>
+                                <h3>
+                                    서울 속 한화를 찾아라! 👀
+                                </h3>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <div class="img-box">
+                                    <img src="../images/main/social05.png" alt="">
+                                    <span class="icon youtube"></span>
+                                </div>
+                                <h3>
+                                    나를 알아주는 회사가 어디 있냐고? 여기 있지요~!😉
+                                </h3>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="control-box">
+                    <div class="btns">
+                        <button class="btn-prev"><span class="material-icons">
+                                chevron_left
+                            </span></button>
+                        <button class="btn-next"><span class="material-icons">
+                                chevron_right
+                            </span></button>
+                    </div>
+                    <div class="pagination">
+                        <div class="inner"></div>
+                    </div>
+                </div>
+                <a href="" class="more">MORE</a>
+            </div>
+        </div>
+        <!-- social end -->
     </main>
     <!--main end-->
     <!-- 혼자 동떨어져서 독립적으로 사용가능한 태그 -->

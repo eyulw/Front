@@ -4,9 +4,93 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+.main-visual .mask {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.main-visual .mask .list li .img {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-visual .mask .list li .txt {
+  position: absolute;
+  top: 60%;
+  left: 200px;
+  line-height: 1.5;
+  color: #fff;
+}
+.main-visual .mask .list li .txt .main {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.main-visual .mask .list li .txt .main:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin: 20px 0;
+}
+.main-visual .mask .list li .txt .sub {
+  font-size: 20px;
+}
+.main-visual .mask .list li.visual01 .img {
+  background-image: url("../images/main/visual01.jpg");
+}
+.main-visual .mask .list li.visual02 .img {
+  background-image: url("../images/main/visual02.jpg");
+}
+.main-visual .mask .list li.visual03 .img {
+  background-image: url("../images/main/visual03.jpg");
+}
+.main-visual .mask .list li.visual04 .img {
+  background-image: url("../images/main/visual04.jpg");
+}
+.main-visual .mask .list li.visual05 .img {
+  background-image: url("../images/main/visual05.jpg");
+}
+.main-visual .mask .btns {
+  position: absolute;
+  left: 200px;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  background-color: #f60;
+  border-radius: 100px;
+}
+.main-visual .mask .btns .pagination {
+  width: auto;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Noto Sans KR";
+  padding: 0 20px;
+  background-color: #f60;
+}
+.main-visual .mask .btns button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-radius: 100px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-visual .mask .btns .swiper-pagination-total {
+  opacity: 0.5;
+}
 
 .business {
-  padding: 150px 0;
+  padding-bottom: 30px;
 }
 .business .list {
   display: flex;
@@ -108,10 +192,30 @@
 }
 .master-piece .case .menu li {
   width: 20%;
-  padding: 30px 0;
+  padding: 50px 0;
   text-align: center;
   border-right: 1px solid rgba(255, 255, 255, 0.25);
   cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+}
+.master-piece .case .menu li span {
+  transition: all 0.25s ease;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+.master-piece .case .menu li::after {
+  font-family: "Material Icons";
+  content: "\e8e4";
+  display: block;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
   transition: all 0.25s ease;
 }
 .master-piece .case .menu li:last-child {
@@ -120,6 +224,14 @@
 .master-piece .case .menu li:hover {
   background-color: #f60;
   border-right-color: #f60;
+}
+.master-piece .case .menu li:hover span {
+  left: 30px;
+  transform: translate(0, -50%);
+}
+.master-piece .case .menu li:hover:after {
+  opacity: 1;
+  right: 30px;
 }
 .master-piece .case .contents {
   position: absolute;
@@ -134,6 +246,11 @@
   top: 0;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+.master-piece .case .contents li.on {
+  opacity: 1;
 }
 .master-piece .case .contents li:nth-child(1) {
   background-image: url("../images/main/main_master_hover01.jpg");
@@ -164,4 +281,108 @@
 }
 .master-piece .case .contents li .container p {
   font-size: 24px;
+}
+
+.news-room .list {
+  display: flex;
+  justify-content: space-between;
+}
+.news-room .list li {
+  width: calc(33.33% - 20px);
+  border-bottom: 3px solid #eee;
+  padding-bottom: 20px;
+}
+.news-room .list li a:hover img {
+  transform: scale(1.25);
+}
+.news-room .list li a .img-box {
+  overflow: hidden;
+}
+.news-room .list li a img {
+  width: 100%;
+  transition: all 0.25s ease;
+}
+.news-room .list li a h3 {
+  font-size: 20px;
+  margin: 20px 0;
+  line-height: 1.25;
+}
+
+.social {
+  overflow: hidden;
+}
+.social .list a .img-box {
+  position: relative;
+}
+.social .list a .img-box img {
+  width: 100%;
+}
+.social .list a .img-box .icon {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 100px;
+  background-image: url("../images/main/social_blog.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.social .list a .img-box .icon.blog {
+  background-image: url("../images/main/social_blog.png");
+}
+.social .list a .img-box .icon.youtube {
+  background-image: url("../images/main/social_youtube.png");
+}
+.social .list a h3 {
+  font-size: 18px;
+  line-height: 1.25;
+  margin-top: 20px;
+}
+.social .control-box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-top: 30px;
+}
+.social .control-box .btns {
+  display: flex;
+  justify-content: end;
+  margin-left: 20px;
+}
+.social .control-box .btns button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+.social .control-box .pagination {
+  position: relative;
+  flex-grow: 1;
+}
+.social .control-box .pagination .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background-color: #f60;
+}
+
+.more {
+  font-size: 14px;
+  font-weight: 700;
+  color: #999;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  display: flex;
+  align-items: center;
+}
+.more::after {
+  font-family: "Material Icons";
+  content: "\e5cc";
+  display: block;
 }

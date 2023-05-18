@@ -15,6 +15,7 @@ a {
 .container {
   width: 1200px;
   margin: 0 auto 0 auto;
+  position: relative;
 }
 
 h2 {
@@ -33,4 +34,8 @@ p {
 
 .point-color {
   color: #f60;
+}
+
+.section {
+  padding: 100px 0;
 }

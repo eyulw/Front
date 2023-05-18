@@ -1,9 +1,90 @@
 @import "vars";
 .main{
-    &-visual video{
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
+    &-visual {
+        video{
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+        .mask {
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            .list{
+                li{
+                    .img{
+                        height: 100vh;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    .txt{
+                        position: absolute;
+                        top: 60%;
+                        left: 200px;
+                        line-height: 1.5;
+                        color: #fff;
+                        .main{
+                            font-size: $h2;
+                            font-weight: 700;
+                            line-height: 1.2;
+                            &:after{
+                                content:"";
+                                display: block;
+                                width: 100%;
+                                height: 3px;
+                                background-color: #fff;
+                                margin:20px 0;
+                            }
+                        }
+                        .sub{
+                            font-size: $h4;
+                        }
+                    }
+                    // loop돌리는건 nth-child로 접근하면 안됨
+                    @for $i from 1 through 5{
+                        &.visual0#{$i} .img{
+                        background-image: url("../images/main/visual0#{$i}.jpg");
+                        }
+                    }
+                }
+            }
+            .btns{
+                position: absolute;
+                left: 200px;
+                bottom: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 3;
+                background-color: $main-color;
+                border-radius: 100px;
+                .pagination{
+                    width: auto;
+                    color: #fff;
+                    font-size: $h4;
+                    font-family: "Noto Sans KR";
+                    padding: 0 20px;
+                    background-color: $main-color;
+                }
+                button{
+                    color: white;
+                    background-color: transparent;
+                    border:none;
+                    border-radius: 100px;
+                    width: 70px;
+                    height: 70px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .swiper-pagination-total{
+                    opacity: 0.5;
+                }
+            }
+        }
     }
 }
 
@@ -14,7 +95,7 @@
 // }
 
 .business{
-    padding:150px 0;
+    padding-bottom: 30px;
     .list {
         display: flex;
         color: #111;
@@ -129,17 +210,45 @@
             font-size: $h4;
             li{
                 width: 20%;
-                padding: 30px 0;
+                padding: 50px 0;
                 text-align: center;
                 border-right: 1px solid rgba($color: #fff, $alpha: 0.25);
                 cursor: pointer;
                 transition: all 0.25s ease;
+                position: relative;
+                span{
+                    transition: all 0.25s ease;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    white-space: nowrap;
+                }
+                &::after{
+                    font-family: "Material Icons";
+                    content: "\e8e4";
+                    display: block;
+                    position: absolute;
+                    right: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    opacity: 0;
+                    transition: all 0.25s ease;
+                }
                 &:last-child{
                     border-right:none ;
                 }
                 &:hover{
                     background-color: $main-color;
                     border-right-color:$main-color ;
+                    span{
+                        left: 30px;
+                        transform: translate(0,-50%);
+                    }
+                    &:after{
+                        opacity: 1;
+                        right: 30px;
+                    }
                 }
             }
         }
@@ -155,6 +264,11 @@
                 top: 0;
                 width: 100%;
                 height: 100%;
+                opacity: 0;
+                transition: all 0.25s ease;
+                &.on{
+                    opacity: 1;
+                }
                 @for $i from 1 through 5{
                     &:nth-child(#{$i}){
                         background-image: url("../images/main/main_master_hover0#{$i}.jpg");
@@ -177,5 +291,120 @@
                 }
             }
         }
+    }
+}
+// master-piece end
+
+.news-room{
+    .list{
+        display: flex;
+        justify-content: space-between;
+        li{
+            width: calc(33.33% - 20px);
+            border-bottom: 3px solid #eee;
+            padding-bottom: 20px;
+            a{
+                &:hover img{
+                    transform: scale(1.25);
+                }
+                .img-box{
+                    overflow: hidden;
+                }
+                img{
+                    width: 100%;
+                    transition: all 0.25s ease;
+                }
+                h3{
+                    font-size: $h4;
+                    margin: 20px 0;
+                    line-height: 1.25;
+                }
+            }
+        }
+    }
+}
+
+.social{
+    overflow: hidden;
+    .list{
+        a{
+            .img-box{
+                position: relative;
+                img{
+                    width: 100%;
+                }
+                .icon{
+                    width:40px;
+                    height: 40px;
+                    background-color: #fff;
+                    position: absolute;
+                    right:20px;
+                    bottom:20px;
+                    border-radius: 100px;
+                    background-image: url("../images/main/social_blog.png");
+                    background-position: 50%;
+                    background-repeat: no-repeat;
+                    &.blog{
+                        background-image: url("../images/main/social_blog.png");
+                    }
+                    &.youtube{
+                        background-image: url("../images/main/social_youtube.png");
+                    }
+                }
+            }
+            h3{
+                font-size: 18px;
+                line-height: 1.25;
+                margin-top:20px;
+            }
+        }
+    }
+    .control-box{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-top: 30px;
+        .btns{
+            display: flex;
+            justify-content: end;
+            margin-left: 20px;
+            button{
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: 100px;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 10px;
+            }
+        }
+        .pagination{
+            position: relative;
+            // space-between해서 생긴 가운데 여백 다 가져감
+            flex-grow: 1;
+            // width: 900px;
+            .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+                background-color: $main-color;
+            }
+        }
+    }
+}
+
+.more{
+    font-size: 14px;
+    font-weight: 700;
+    color: #999;
+    position:absolute;
+    right:0;
+    top:20px;
+    display: flex;
+    align-items: center;
+    &::after{
+        font-family: "Material Icons";
+        content: "\e5cc";
+        display: block;
     }
 }
