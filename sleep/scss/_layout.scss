@@ -1,0 +1,107 @@
+@import "vars";
+
+.header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+    color: white;
+    .logo{
+        flex-grow: 1;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        padding-left:50px;
+    }
+    &:after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: 100px;
+        background-color: rgba($color: #fff, $alpha: 0.25);
+        opacity: 0;
+        transition: all 0.25s ease 0.25s;
+        pointer-events: none;
+    }
+    &.on:before{
+        top: 0;
+    }
+    &.on:after{
+        opacity: 1;
+    }
+    &::before{
+        content: "";
+        display: block;
+        height: 160px;
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.75);
+        position: absolute;
+        left: 0;
+        top: -160px;
+        z-index: -1;
+        transition: all 0.5s ease;
+    }
+
+    .gnb{
+        // height: 100px;
+        flex-grow: 2;
+        .list{
+            display: flex;
+            justify-content: space-around;
+            >li{
+                border-radius: 0px 0px 20px 20px;
+                padding-bottom: 30px;
+                &:hover{
+                    .depth01::after{
+                        transform: scaleX(1);
+                    }
+                    .depth02 {
+                        display: flex;
+                    }
+                }
+            }
+            .depth01{
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+                font-weight: 500;
+                text-transform: capitalize;
+                padding: 0 60px;
+                position: relative;
+                &::after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    height: 2px;
+                    left: 50px;
+                    right: 50px;
+                    transform: scaleX(0);
+                    transition: all 0.25s ease;
+                    background-color: #fff;
+                }
+            }
+            .depth02{
+                text-align: center;
+                display: none;
+                position: absolute;
+                font-size: 16px;
+                padding-left: 40px;
+                li{
+                    a{
+                        display: block;
+                        padding: 20px;
+                    }
+                }                
+            }
+        }
+    }
+    .util-menu{
+        flex-grow: 1;
+    }
+}
