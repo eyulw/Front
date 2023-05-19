@@ -1,3 +1,4 @@
+@import "mixins";
 @import "vars";
 .main{
     &-visual {
@@ -225,8 +226,7 @@
                     white-space: nowrap;
                 }
                 &::after{
-                    font-family: "Material Icons";
-                    content: "\e8e4";
+                    @include icon("\e8e4");
                     display: block;
                     position: absolute;
                     right: 50%;
@@ -393,6 +393,67 @@
     }
 }
 
+.banner{
+    display: flex;
+    color: #fff;
+    >div{
+        width:50% ;
+        display: flex;
+        padding: 80px 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .inner{
+            width: 600px;
+        }
+    }
+    .forena{
+        background-image: url("../images/main/main_banner_bg_img01.jpg");
+        justify-content: end;
+        h2{
+            text-transform: uppercase;
+            letter-spacing: 20px;
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: $h4;
+        }
+    }
+    .util-menu{
+        background-image: url("../images/main/main_banner_bg_img02.jpg");
+        .inner{
+            display: flex;
+            justify-content: space-between;
+            padding-left: 20px;
+            align-items: center;
+            h2{
+                margin-bottom: 0;
+                span{
+                    font-size: $h4;
+                    display: block;
+                    margin-top:40px ;
+                }
+            }
+            ul{
+                li{
+                    a{
+                        display: block;
+                        padding: 10px 0;
+                        font-size: $h4;
+                        border-bottom: 1px solid #fff;
+                        width: 200px;
+                        display: flex;
+                        justify-content: space-between;
+                        &::after{
+                            @include icon("\e5cc");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 똑같은 걸 반복한다면 함수를 생각하면 된다.
+
 .more{
     font-size: 14px;
     font-weight: 700;
@@ -403,8 +464,7 @@
     display: flex;
     align-items: center;
     &::after{
-        font-family: "Material Icons";
-        content: "\e5cc";
+        @include icon("\e5cc");
         display: block;
     }
 }

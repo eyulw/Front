@@ -141,3 +141,64 @@
         margin-bottom: 10px;
     }
 }
+
+.footer{
+    background-color: #202020;
+    color: #fff;
+    position: relative;
+    padding:30px 0 100px ;
+    .footer-logo{
+        position: absolute;
+        left:50px;
+        top: 50px;
+    }
+    .container{
+        .menu{
+            display: flex;
+            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.25);
+            li{
+                &:nth-child(1) a{
+                    padding-left: 0;
+                }
+                a{
+                    padding: 20px;
+                    // 인라인 속성에 위아래 없고 좌우만 있어서 block처리해야 padding 위아래도 설정됨.
+                    display: block;
+                }
+            }
+        }
+        address{
+            padding-top: 20px;
+            color: rgba($color: #fff, $alpha: 0.25);
+            .copyright{
+                margin-top: 30px;
+            }
+        }
+        .info-box{
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            z-index: 2;
+            color: rgba($color: #fff, $alpha: 0.25);
+            .tel{
+                display: flex;
+                dl{
+                    display: flex;
+                    margin-left: 50px;
+                    dd {
+                        color: rgba($color: #fff, $alpha: 0.5);
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .social{
+                display: flex;
+                justify-content: end;
+                margin-top: 30px;
+                a{
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}

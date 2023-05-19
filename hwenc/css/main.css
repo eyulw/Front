@@ -371,6 +371,63 @@
   background-color: #f60;
 }
 
+.banner {
+  display: flex;
+  color: #fff;
+}
+.banner > div {
+  width: 50%;
+  display: flex;
+  padding: 80px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner > div .inner {
+  width: 600px;
+}
+.banner .forena {
+  background-image: url("../images/main/main_banner_bg_img01.jpg");
+  justify-content: end;
+}
+.banner .forena h2 {
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  margin-bottom: 20px;
+}
+.banner .forena p {
+  font-size: 20px;
+}
+.banner .util-menu {
+  background-image: url("../images/main/main_banner_bg_img02.jpg");
+}
+.banner .util-menu .inner {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  align-items: center;
+}
+.banner .util-menu .inner h2 {
+  margin-bottom: 0;
+}
+.banner .util-menu .inner h2 span {
+  font-size: 20px;
+  display: block;
+  margin-top: 40px;
+}
+.banner .util-menu .inner ul li a {
+  display: block;
+  padding: 10px 0;
+  font-size: 20px;
+  border-bottom: 1px solid #fff;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.banner .util-menu .inner ul li a::after {
+  font-family: "Material Icons";
+  content: "\e5cc";
+}
+
 .more {
   font-size: 14px;
   font-weight: 700;

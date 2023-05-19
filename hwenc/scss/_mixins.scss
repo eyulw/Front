@@ -1,0 +1,9 @@
+@mixin icon($code){
+    font-family: "Material Icons";
+    content: $code;
+}
+
+@mixin box($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
