@@ -4,6 +4,8 @@
         width: 100%;
         height: 100vh;
         object-fit: cover;
+        // 다음화면 넘어갈때 생기는 공백 없애줌
+        vertical-align: top;
     }
     .txt{
         color: #fff;
@@ -61,3 +63,197 @@
         top: 100%;
     }
 }
+
+.title-box{
+    padding: 0 50px;
+    h2{
+        font-size: $h4;
+    }
+    h3{
+        position:relative;
+        font-size: $h2;
+        padding: 0;
+    }
+    a{
+        padding: 15px 30px;
+        border: 1px solid #fff;
+        margin-top: 30px;
+        display: inline-block;  //inline, block 특징가짐(넓이 높이 주기)
+    }
+}
+
+.tech{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows: repeat(2,400px);
+    gap:15px;  //두개 쓰면 row column
+    background-image: url("../images/main/sec2_bg.jpg");
+    color: #fff;
+    padding: 50px;
+    .content{
+        position: relative;
+        border-radius:30px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+        overflow: hidden;
+        &:not(.not) h3{
+            position: absolute;
+            bottom: 0;
+            font-size: $h3;
+            font-weight: 700;
+            width: 100%;
+            padding: 20px 40px;
+            &::after{
+                content: "";
+                display: block;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+                position: absolute;
+                left: 0;
+                bottom: -100%;
+                transition:all 0.25s ease;
+            }
+        }
+        &:hover h3:after{
+            bottom: 0;
+        }
+        &:nth-child(1){
+            // grid-column-start: 1;
+            // grid-column-end: 3;
+            grid-column: 1/3;        // 한번에 쓰기
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            padding: 0 50px;
+        }
+        &:nth-child(2){
+            background-image: url("../images/main/sec2_bg1.jpg");
+        }
+        &:nth-child(3){
+            background-image: url("../images/main/sec2_bg2.jpg");
+        }
+        &:nth-child(4){
+            background-image: url("../images/main/sec2_bg3.jpg");
+        }
+        &:nth-child(5){
+            background-image: url("../images/main/sec2_bg4.jpg");
+        }
+        &:nth-child(6){
+            // background-image: url("../images/main/sec2_bg5.jpg");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h3{
+                font-size:$h2;
+            }
+        }
+        &:nth-child(7){
+            background-image: url("../images/main/sec2_bg5.jpg");
+        }
+    } 
+}
+
+.product{
+    padding: 100px;
+    background-color: $gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .title-box{
+        padding: 0 50px;
+        color: #111;
+        a{
+            border-color: #111;
+        }
+    }
+    .list{
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+        padding: 100px 50px;
+        li{
+            margin-bottom: 50px;
+            width: 50%;
+            &:nth-child(1) h3::before{
+                background-image: url("../images/main/sec3_icon1.png");
+            }
+            &:nth-child(2) h3::before{
+                background-image: url("../images/main/sec3_icon2.png");
+            }
+            &:nth-child(3) h3::before{
+                background-image: url("../images/main/sec3_icon3.png");
+            }
+            &:nth-child(4) h3::before{
+                background-image: url("../images/main/sec3_icon4.png");
+            }
+            h3{
+                font-size: $h3;
+                margin-bottom: 20px;
+                &::before{
+                    content: "";
+                    display: block;
+                    height: 64px;
+                    width: 64px;
+                    background-repeat: no-repeat;
+                    background-position: 50% 0;
+                    border: 2px solid #111;
+                    // 정사각형일때 %줄수있음
+                    border-radius: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    .img-area{
+        display: flex;
+        align-items: center;
+        padding-right: 100px;
+        img:nth-child(1){
+            margin-right: -30px;
+            // z-index: 2;  //다른것들 position없으면 position있는게 위로 올라감
+            position: relative;
+        }
+        img:nth-child(3){
+            margin-left: 30px;
+        }
+    }
+}
+
+.media{
+    background-color: $gray;
+    padding: 100px 0;
+    .mask{
+        padding:50px;
+        margin: 0 auto;
+        overflow-x: hidden;
+        margin-top: 150px;
+    }
+    .list{
+        li{
+            width: 400px;
+            &:hover{
+                transform: translateY(-50px);
+            }
+            a{
+                display: block;
+                transition: all 0.25s ease;
+                border-radius: 30px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 250px;
+                    object-fit: cover;
+                    vertical-align: top;
+                }
+                p{
+                    padding: 35px;
+                    background-color: rgba(0, 0, 0, 0.25);
+                }
+            }
+        }
+    }
+}
+

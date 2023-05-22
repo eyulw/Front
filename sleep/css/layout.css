@@ -88,3 +88,53 @@
   display: block;
   padding: 20px;
 }
+
+.footer {
+  padding: 100px 50px;
+  display: flex;
+  background-color: #111;
+  color: #fff;
+}
+.footer address {
+  padding: 0 100px;
+}
+.footer address .info {
+  display: flex;
+}
+.footer address .info dl {
+  display: flex;
+  margin-right: 50px;
+}
+.footer address .info dl dt {
+  font-weight: 700;
+}
+.footer address .info dl dd {
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 10px;
+}
+.footer address p {
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 50px;
+}
+.footer .menu {
+  margin-left: auto;
+}
+.footer .menu ul {
+  display: flex;
+}
+.footer .menu ul li:nth-child(1) {
+  padding-right: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+.footer .menu ul li:nth-child(1)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
