@@ -7,48 +7,70 @@
         // img나 video에만 사용가능
         // object-fit:cover;
     }
-    .txt{
+    .slogan{
         position: absolute;
-        text-align: center;
+        color: #fff;
         width: 100%;
+        text-align: center;
         top: 50%;
         transform: translateY(-50%);
         font-size: $h1;
         font-weight: 700;
-        color: #fff;
         line-height: 1.5;
+        .word{
+            overflow: hidden;
+        }
     }
 }
 
-.container {
-    border: 1px solid red;
-    margin-left:200px;
+.banner {
+    margin-left:230px;
     margin-top: 200px;
-    .title{
-        h2{
-            font-size: $h1;
-            font-weight: 700;
-            line-height: 1.5;
-            margin-bottom: 30px;
-        }
-        p{
-            font-size: $h3;
-            color: #333;
-            font-weight: 400;
-            line-height: 1.5;
-        }
-    }
-    
     .mask{
-        padding:50px 0;
+        padding:100px 0;
         margin: 0 auto;
         overflow-x: hidden;
         margin-top: 20px;
+        position: relative;
+        button{
+            position: absolute;
+            background: none;
+            top: 40%;
+            border: 2px solid #fff;
+            border-radius: 100%;
+            width:60px;
+            height: 60px;
+            z-index: 2;
+            cursor:pointer;
+            .material-icons{
+                font-size: 48px;
+                color: #fff;
+            }
+            &.btn-next{
+                right: 585px;
+            }
+        }
+        .pagination{
+            margin-top: 50px;
+            .swiper-pagination-bullet{
+                width: 12px;
+                height: 12px;
+                opacity: 1;
+                border: 3px solid $main-color;
+                background: none;
+                border-radius: 100px;
+                &-active{
+                    width: 30px;
+                    background-color:$main-color;
+                }
+            }
+        }
     }
     .list{
         li{
             width: 1000px;
             a{
+                display: block;
                 position: relative;
                 >img{
                     width: 100%;
@@ -56,14 +78,78 @@
                 }
                 .txt{
                     display: flex;
+                    align-items: center;
+                    margin-top: 28px;
+                    .main{
+                        background-color: #000;
+                        color: #fff;
+                        font-size: $h4;
+                        padding: 12px 16px;
+                    }
+                    .sub{
+                        margin-left: 20px;
+                        font-size: 28px;
+                        font-weight: 700;
+                    }
                 }
                 .logo{
-                    border: 1px solid red;
                     position: absolute;
-                    // top: 0;
-                    // left: 100px;
+                    top: 80px;
+                    left: 60px;
                 }
             }
         }
     }
 }
+
+.partner{
+    padding: 150px 0;
+    background-color: $bg-color;
+    overflow-x: hidden;
+    .brand{
+        margin-top: 50px;
+        // width: 100vw;
+        ul{
+            // display: flex;
+            // animation: brand-motion 5s linear infinite;
+            transition-timing-function: linear;
+            li{
+                padding: 0 40px;
+                width: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.title-box{
+    h2{
+        font-size: $h1;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        .mini{
+            color: $main-color;
+            display: block;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    }
+    p{
+        font-size: $h3;
+        color: #333;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+}
+
+// @keyframes brand-motion {
+//     0%{
+//         transform: translateX(0%);
+//     }
+//     100%{
+//         transform: translateX(-50%);
+//     }
+// }

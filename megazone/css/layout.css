@@ -1,26 +1,46 @@
 .header {
-  position: absolute;
-  border: 1px solid red;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #fff;
   width: 100%;
-  height: 70px;
+  height: 80px;
   padding: 20px 60px;
   box-sizing: border-box;
   z-index: 99;
+  transition: all 0.25s ease;
 }
 .header .logo {
-  border: 1px solid red;
+  height: 80px;
 }
 .header .logo img {
-  max-height: 40px;
+  height: 40px;
+  top: 20px;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+.header .logo img.white {
+  opacity: 1;
+}
+.header.on {
+  color: #111;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.header.on .logo {
+  height: 80px;
+}
+.header.on .logo img.white {
+  opacity: 0;
+}
+.header.on .logo img.black {
+  opacity: 1;
 }
 .header .list {
-  border: 1px solid red;
   display: flex;
   gap: 20px;
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
 }

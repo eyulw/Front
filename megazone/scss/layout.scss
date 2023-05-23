@@ -1,27 +1,48 @@
 @import "vars";
 .header{
-    position: absolute;
-    border: 1px solid red;
+    // absolute fixed는 최소넓이가짐, 넓이지정 필요
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #fff;
     width: 100%;
-    height: 70px;
+    height: 80px;
     padding: 20px 60px;
-    box-sizing: border-box;
+    box-sizing: border-box; //box-size에 padding, border 다 포함
     z-index: 99;
+    transition: all 0.25s ease;
     .logo{
-        border: 1px solid red;
+        height: 80px;
         img{
-            max-height: 40px;
+            height: 40px;
+            top: 20px;
+            position: absolute;
+            opacity: 0;
+            transition: all 0.25s ease;
+            &.white{
+                opacity: 1;
+            }
         }
     }
+
+    &.on{
+        color: #111;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.15);
+        .logo{
+            height: 80px;
+            img{
+                &.white{ opacity: 0;}
+                &.black{opacity: 1;}
+            }
+        }
+    }
+
     .list{
-        border: 1px solid red;
         display: flex;
-        gap: 20px;
+        gap: 20px;  //li에 padding 줘도 됨
         font-size: $h4;
         font-weight: 700;
-        color: #fff;
     }
 }
