@@ -51,14 +51,18 @@
             }
         }
         .pagination{
-            margin-top: 50px;
+            z-index: 1;
+            position: absolute;
+            top: 85%;
+            left: 54%;
             .swiper-pagination-bullet{
                 width: 12px;
                 height: 12px;
                 opacity: 1;
-                border: 3px solid $main-color;
-                background: none;
+                // border: 3px solid $main-color;
+                background: #ccc;
                 border-radius: 100px;
+                transition: all 0.5s ease;
                 &-active{
                     width: 30px;
                     background-color:$main-color;
@@ -72,9 +76,16 @@
             a{
                 display: block;
                 position: relative;
-                >img{
-                    width: 100%;
-                    height: 600px;
+                .img-box{
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 600px;
+                        transition: all 0.5s ease;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                    }
                 }
                 .txt{
                     display: flex;
@@ -108,10 +119,7 @@
     overflow-x: hidden;
     .brand{
         margin-top: 50px;
-        // width: 100vw;
         ul{
-            // display: flex;
-            // animation: brand-motion 5s linear infinite;
             transition-timing-function: linear;
             li{
                 padding: 0 40px;
@@ -123,6 +131,59 @@
         }
     }
 }
+
+.tech-content{
+    iframe{
+        width: 100%;
+        aspect-ratio: 1 / 0.5625;
+    }
+    .content{
+        width: 100%;
+        position: absolute;
+        padding:120px 0 ;
+        .title-box{
+            top: 180px;
+            h2{
+                color: #fff;
+                font-size: $h1;
+                font-weight: 700;
+                line-height: 1.5;
+                margin-bottom: 30px;
+                .mini{
+                    color: $main-color;
+                    display: block;
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .content-list{
+            display: flex;
+            align-items: start;
+            top: 500px;
+            a{
+                padding-right:40px;
+                color: #fff;
+                .img-box{
+                    overflow: hidden;
+                    img{
+                        transition: all 0.5s ease;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                p{
+                    margin-top: 20px;
+                    color: #ddd;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
 
 .title-box{
     h2{
@@ -144,12 +205,3 @@
         line-height: 1.5;
     }
 }
-
-// @keyframes brand-motion {
-//     0%{
-//         transform: translateX(0%);
-//     }
-//     100%{
-//         transform: translateX(-50%);
-//     }
-// }
