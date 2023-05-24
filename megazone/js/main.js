@@ -1,4 +1,6 @@
 Splitting();
+AOS.init();
+
 const header=document.querySelector(".header");
 // header.classList.add("on");
 //사용자가 scroll을 해서 스크롤의 높이가 0보다 커지면 on을 단다.
@@ -36,6 +38,15 @@ new Swiper(".partner .brand",{
     loopedSlides:5,
     autoplay:{
         delay:10,
+        disableOnInteraction:false,
+    }
+});
+
+new Swiper(".recruit .txt-box .rolling",{
+    direction:'vertical',
+    loop:true,
+    autoplay:{
+        delay:2000,
         disableOnInteraction:false,
     }
 });
