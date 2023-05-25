@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins";
 .header{
     // absolute fixed는 최소넓이가짐, 넓이지정 필요
     position: fixed;
@@ -46,3 +47,111 @@
         font-weight: 700;
     }
 }
+
+.footer{
+    background-color: #111;
+    color: rgba($color: #fff, $alpha: 0.75);
+    padding: 150px 0;
+    .upper{
+        display: flex;
+        // align-items: start;
+        .menu-box{
+            width: 50%;
+            .list{
+                display: flex;
+                flex-wrap: wrap;
+                // flex-direction: column;
+                // height: 500px;
+                // justify-content: space-between;
+                >li{
+                    width: 50%;
+                    margin-bottom: 50px;
+                    &:nth-child(1){
+                        order: 1;
+                    }
+                    &:nth-child(2){
+                        order: 3;
+                    }
+                    &:nth-child(3){
+                        order: 2;
+                    }
+                    &:nth-child(4){
+                        order: 4;
+                    }
+                    &:nth-child(5){
+                        order: 5;
+                    }
+                }
+                .depth01{
+                    font-size: $h3;
+                    font-weight: 700;
+                    transition: all 0.25s ease;
+                    &:hover{
+                        color: $main-color;
+                    }
+                    &::after{
+                        @include icon("\f1df");
+                        display: inline-block;
+                        margin-left: 20px;
+                    }
+                }
+                .depth02{
+                    margin-top: 20px;
+                    li{
+                        a{
+                            display:block;
+                            padding: 10px 0;
+                            font-size: $h4;
+                            font-weight:200;
+                        }
+                    }
+                }
+
+            }
+        }
+        .inquiry{
+            background-color: #222;
+            flex-grow: 1;   //남아있는 여백 다 가져감
+            padding: 80px;
+            font-size: $h4;
+            position: relative;
+            .main{
+                font-size: $h2;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            .more{
+                position: absolute;
+                right: 80px;
+                bottom: 80px;
+            }
+        }
+    }
+    .lower{
+        border-top: 1px solid rgba($color: #fff, $alpha: 0.25);
+        padding-top: 100px;
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        font-family: "Noto Sans KR";
+        address{
+            .info-box{
+                display: flex;
+                margin: 10px 0;
+            }
+            dl{
+                display: flex;
+                margin-right: 20px;
+                align-items: center;
+            }
+        }
+        .copyright{
+            font-size: 14px;
+            padding-bottom: 10px;
+        }
+    }
+}
+// 인라인태그 : a , span , strong , em , input
+// 특징 : 위아래 css 안먹음. 좌우는 잘됨. 넓이 높이 설정 못함.
+// inline-block : 옆으로 가는데 넓이 높이 설정가능.

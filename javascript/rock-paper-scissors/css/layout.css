@@ -1,0 +1,94 @@
+body {
+  background-color: #333;
+}
+
+.header {
+  background-color: #fff;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.computer {
+  margin: 100px 0;
+}
+.computer ul {
+  display: flex;
+  justify-content: center;
+}
+
+.human ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.human ul li img {
+  width: 80px;
+}
+
+.result {
+  margin-top: 50px;
+}
+.result ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.result ul li {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.result ul li.win {
+  background-color: blue;
+  text-transform: uppercase;
+}
+.result ul li.draw {
+  background-color: gray;
+  text-transform: uppercase;
+}
+.result ul li.lose {
+  background-color: red;
+  text-transform: uppercase;
+}
+
+.footer {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.footer p {
+  background-color: #fff;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 100px;
+}
+
+.cover {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 99;
+  color: #fff;
+  display: none;
+}
+.cover h2 {
+  font-size: 32px;
+  font-weight: 700;
+  padding: 50px 0;
+}
+.cover button {
+  font-size: 24px;
+}
