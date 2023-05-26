@@ -1,0 +1,25 @@
+.main-visual{
+    ul{
+        li{
+            position: relative;
+            .txt-box{
+                position: absolute;
+                top:25%;
+                left:15%;
+                color: #fff;
+                .main{
+                    font-size: 143px;
+                    font-weight: 500;
+                }
+                .sub{
+                    font-size: 18px;
+                    margin-top: 120px;
+                    line-height: 2;
+                }
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

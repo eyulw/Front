@@ -1,0 +1,51 @@
+@import "vars";
+.header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding:0 50px;
+    box-sizing: border-box;
+    z-index: 99;
+    &.on{
+        color: #000;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.1);
+        .logo{
+            a>div{
+                &.white{opacity: 0;}
+                &.black{opacity: 1;}
+            }
+        }
+    }
+    .logo{
+        a{
+            display: flex;
+            align-items: center;
+            >div{
+                display: flex;
+                align-items: center;
+                position: absolute;
+                opacity: 0;
+                &.white{
+                    opacity: 1;
+                }
+                .firstlogo{
+                    height: 35px;
+                    padding-right: 10px;
+                }
+                .secondlogo{
+                    height: 20px;
+                }
+            }
+        }
+    }
+    .util-menu{
+        a{
+            font-size: $h4;
+            font-weight: 500;
+        }
+    }
+}

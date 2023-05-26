@@ -1,0 +1,55 @@
+body{
+    font-family: "Noto Sans KR";
+    background-color: #333;
+}
+
+.header{
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.input-box{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 100px;
+    .word{
+        // input태그는 부모font 상속받지않음.
+        font-family: "Noto Sans KR";
+        font-size: 20px;
+        font-weight: 500;
+        height: 40px;
+        width: 600px;
+        border: none;
+    }
+}
+
+.word-list{
+    margin-top: 100px;
+    ul{
+        display: flex;
+        width: 1200px;
+        margin:0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        li{
+            padding: 20px 30px;
+            background-color: rgb(255, 160, 176);
+            font-size: 20px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+        }
+    }
+}

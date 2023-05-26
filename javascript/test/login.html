@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- action에 서버 주소 적어줘야 되는데 없으면 그냥 새로고침 됨. -->
+    <form action="login-process.html">
+        <div>
+            <label>
+                <span>아이디</span>
+                <!-- name 붙여야 값이 넘어감. -->
+                <input type="text" class="user-id" name="userID">
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>패스워드</span>
+                <input type="password" class="user-pw" name="user-pw">
+            </label>
+        </div>
+        <div>
+            <!-- form태그 안에 button은 type="submit" -->
+            <button class="btn-login">로그인</button>
+        </div>
+    </form>
+    <script>
+        const btnLogin = document.querySelector(".btn-login");
+        const userID = document.querySelector(".user-id");
+        const userPw = document.querySelector(".user-pw");
+        btnLogin.addEventListener("click", (e) => {
+            e.preventDefault(); //기본태그 기능 막아버림
+            // console.log("click");
+            // console.log(e);
+            console.log(userID.value);
+            console.log(userPw.value);
+            if (userID.value === "aaa" && userPw.value === "1234") {
+                alert("로그인 성공");
+                location.href = "http://www.daum.net";
+            }
+        });
+    </script>
+</body>
+
+</html>

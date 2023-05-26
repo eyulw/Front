@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label>
+            <span>AGE</span>
+            <input type="text" class="user-age">
+            <button class="btn-adult">성인인증</button>
+        </label>
+    </form>
+    <script>
+        const btnAdult = document.querySelector(".btn-adult");
+        const userAge = document.querySelector(".user-age");
+        // 숫자로 써도 문자로 들어오기때문에 parseInt 해주면 숫자로 바뀜
+
+        btnAdult.addEventListener("click", (e) => {
+            e.preventDefault();
+            const age = parseInt(userAge.value);
+            if (age >= 20) {
+                alert("성인 확인");
+                console.log(userAge + 10);
+                console.log(age + 10);
+                // location.href = "https://www.daum.net";
+            } else {
+                alert("미성년자");
+            }
+        })
+    </script>
+</body>
+
+</html>
