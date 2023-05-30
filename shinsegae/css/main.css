@@ -1,21 +1,233 @@
-.main-visual ul li {
+.main-visual {
   position: relative;
 }
-.main-visual ul li .txt-box {
+.main-visual .mask {
+  overflow: hidden;
+}
+.main-visual .mask .pagination {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin: 120px 0;
+}
+.main-visual .mask .pagination .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  opacity: 0.6;
+}
+.main-visual .mask .pagination .swiper-pagination-bullet-active {
+  background-color: #da2128;
+  opacity: 1;
+}
+.main-visual .mask:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../images/main/ic-down-arrow.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 50px;
+  height: 50px;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.main-visual .list li {
+  position: relative;
+}
+.main-visual .list li .txt-box {
   position: absolute;
   top: 25%;
-  left: 15%;
+  left: 360px;
   color: #fff;
 }
-.main-visual ul li .txt-box .main {
+.main-visual .list li .txt-box .main {
   font-size: 143px;
   font-weight: 500;
 }
-.main-visual ul li .txt-box .sub {
+.main-visual .list li .txt-box .sub {
   font-size: 18px;
   margin-top: 120px;
   line-height: 2;
 }
-.main-visual ul li img {
+.main-visual .list li img {
   width: 100%;
+}
+
+.activity {
+  margin-left: 360px;
+  margin-top: 150px;
+  padding-bottom: 100px;
+}
+.activity .title h1 {
+  font-size: 57.6px;
+  color: #202020;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.activity .mask {
+  padding: 50px 0;
+  overflow: hidden;
+}
+.activity .list li {
+  width: 400px;
+}
+.activity .list li a {
+  display: block;
+}
+.activity .list li a img {
+  width: 100%;
+}
+.activity .list li a .txt-box .main {
+  font-size: 20px;
+  padding: 10px 0;
+}
+.activity .list li a .txt-box .sub {
+  font-size: 16px;
+  color: #787878;
+}
+
+.project {
+  position: relative;
+  padding: 120px 0;
+}
+.project .mask {
+  overflow: hidden;
+}
+.project .mask .list li a {
+  display: block;
+}
+.project .mask .list li a img {
+  width: 100%;
+}
+.project .mask .list li a .txt-box {
+  position: relative;
+  margin-top: 30px;
+}
+.project .mask .list li a .txt-box .main {
+  font-size: 57.6px;
+  font-weight: 500;
+}
+.project .mask .list li a .txt-box .sub {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.project .swiper-pagination {
+  position: absolute;
+  width: 30%;
+  top: 0;
+  left: 58%;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  font-size: 120px;
+  font-weight: 500;
+  color: #c4c4c4;
+}
+.project .swiper-pagination .swiper-pagination-bullet {
+  opacity: 1;
+  background: transparent;
+}
+.project .swiper-pagination .swiper-pagination-bullet-active {
+  color: #220022;
+}
+
+.project-result {
+  position: relative;
+}
+.project-result::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 70px;
+  border: 1px dashed #ddd;
+  box-sizing: border-box;
+  z-index: -1;
+}
+.project-result .list {
+  display: flex;
+  justify-content: space-around;
+}
+.project-result .list li .img-box {
+  width: 115px;
+  height: 115px;
+  border: 4px solid #eee;
+  background: #fff;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-result .list li .img-box img {
+  width: 64px;
+  height: 64px;
+}
+.project-result .list li .txt-box {
+  text-align: center;
+  padding: 20px 0;
+  line-height: 1.2;
+}
+.project-result .list li .txt-box .title {
+  font-size: 20px;
+}
+.project-result .list li .txt-box .number {
+  font-family: "Noto Sans KR";
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.lifestyle {
+  margin-top: 100px;
+  position: relative;
+}
+.lifestyle .txt-box {
+  font-family: "Noto Sans KR";
+  position: absolute;
+  color: #fff;
+  top: 30%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1.5;
+}
+.lifestyle .txt-box .main {
+  position: relative;
+  font-size: 72px;
+  font-weight: 700;
+  padding-bottom: 120px;
+}
+.lifestyle .txt-box .main span {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 400;
+  top: 20px;
+  right: 0;
+}
+.lifestyle .txt-box .main::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+}
+.lifestyle .txt-box .main::after {
+  content: '"';
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+}
+.lifestyle .txt-box .sub {
+  border-top: 2px solid #fff;
+  text-align: left;
+  font-size: 20px;
+  padding-top: 30px;
+  opacity: 0.8;
+}
+.lifestyle img {
+  width: 100%;
+  vertical-align: top;
 }
