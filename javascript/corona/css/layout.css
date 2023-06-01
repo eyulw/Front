@@ -31,12 +31,14 @@ body {
   font-size: 18px;
 }
 .coronaList ul {
-  display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
 }
 .coronaList ul li {
-  width: 120px;
+  flex-basis: 10%;
+  box-sizing: border-box;
+  flex-grow: 1;
   padding: 30px 0;
   background-color: #fff;
   border-radius: 10px;
@@ -44,9 +46,15 @@ body {
   flex-direction: column;
   text-align: center;
   font-size: 20px;
+  overflow: hidden;
+  font-weight: 300;
+}
+.coronaList ul li:last-child {
+  flex-grow: 0;
 }
 .coronaList ul li .incDec {
   font-weight: 700;
   font-size: 28px;
   margin-top: 10px;
+  text-shadow: 1px 1px 0px #e6e6e6,2px 2px 0px #e6e6e6,3px 3px 0px #e6e6e6,4px 4px 0px #e6e6e6,5px 5px 0px #e6e6e6,6px 6px 0px #e6e6e6,7px 7px 0px #e6e6e6,8px 8px 0px #e6e6e6,9px 9px 0px #e6e6e6,10px 10px 0px #e6e6e6,11px 11px 0px #e6e6e6,12px 12px 0px #e6e6e6,13px 13px 0px #e6e6e6,14px 14px 0px #e6e6e6,15px 15px 0px #e6e6e6,16px 16px 0px #e6e6e6,17px 17px 0px #e6e6e6,18px 18px 0px #e6e6e6,19px 19px 0px #e6e6e6,20px 20px 0px #e6e6e6,21px 21px 0px #e6e6e6,22px 22px 0px #e6e6e6,23px 23px 0px #e6e6e6,24px 24px 0px #e6e6e6,25px 25px 0px #e6e6e6,26px 26px 0px #e6e6e6,27px 27px 0px #e6e6e6,28px 28px 0px #e6e6e6,29px 29px 0px #e6e6e6,30px 30px 0px #e6e6e6,31px 31px 0px #e6e6e6,32px 32px 0px #e6e6e6,33px 33px 0px #e6e6e6,34px 34px 0px #e6e6e6,35px 35px 0px #e6e6e6,36px 36px 0px #e6e6e6,37px 37px 0px #e6e6e6,38px 38px 0px #e6e6e6,39px 39px 0px #e6e6e6,40px 40px 0px #e6e6e6,41px 41px 0px #e6e6e6,42px 42px 0px #e6e6e6,43px 43px 0px #e6e6e6,44px 44px 0px #e6e6e6,45px 45px 0px #e6e6e6,46px 46px 0px #e6e6e6,47px 47px 0px #e6e6e6,48px 48px 0px #e6e6e6,49px 49px 0px #e6e6e6,50px 50px 0px #e6e6e6;
 }

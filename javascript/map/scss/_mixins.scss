@@ -1,0 +1,31 @@
+@mixin icon($code){
+    font-family: "Material Icons";
+    content: $code;
+}
+
+@mixin ellipsis(){
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin multiEllipsis($line:3,$lineHeight:1.5){
+    line-height: $lineHeight;
+    height: $line * $lineHeight * 1em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+// text 그림자 만드는 함수
+@mixin longShadow($limit:30,$shadowColor:rgba(0,0,0,0.1)){
+    $shadow:"";
+    @for $i from 1 to $limit{
+        $shadow: $shadow + $i +"px "+ $i +"px 0px "+$shadowColor +",";
+    };
+    $shadow: $shadow + $limit +"px "+ $limit +"px 0px "+ $shadowColor;
+    $shadow:unquote($shadow);   //unquote:scss내장함수
+    text-shadow: $shadow;
+}

@@ -1,3 +1,5 @@
+@import "mixins";
+
 body{
     font-family: "Noto Sans KR";
     background-color: #333;
@@ -30,12 +32,17 @@ body{
         }
     }
     ul{
-        display: flex;
+        // display: flex;
         gap: 10px;
         // justify-content: space-between;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
         li{
-            width: 120px;
+            // width: 120px;
+            flex-basis: 10%;
+            box-sizing: border-box;
+            flex-grow: 1;
             padding: 30px 0;
             background-color: #fff;
             border-radius: 10px;
@@ -43,10 +50,16 @@ body{
             flex-direction: column;
             text-align: center;
             font-size: 20px;
+            overflow: hidden;
+            font-weight: 300;
+            &:last-child {
+                flex-grow: 0;
+            }
             .incDec{
                 font-weight: 700;
                 font-size: 28px;
                 margin-top: 10px;
+                @include longShadow(50, darken(#fff, 10));
             }
         }
     }
